@@ -1,11 +1,22 @@
 <?php
 
-
 function timbatt_theme_support() {
     // Automatic title support
     add_theme_support("title-tag");
 }
 add_action("after_setup_theme", "timbatt_theme_support");
+
+
+function timbatt_menus() {
+    $locations = [
+        "primary" => "Navbar menu items",
+        "footer" => "Footer menu items",
+    ];
+
+    register_nav_menus($locations);
+}
+add_action("init", "timbatt_menus");
+
 
 function timbatt_register_styles() {
     wp_enqueue_style(
@@ -19,7 +30,6 @@ function timbatt_register_styles() {
 add_action("wp_enqueue_scripts", "timbatt_register_styles");
 
 
-
 function timbatt_register_scripts() {
     wp_enqueue_script(
         "timbatt-script",
@@ -31,5 +41,3 @@ function timbatt_register_scripts() {
     );
 }
 add_action("wp_enqueue_scripts", "timbatt_register_scripts");
-
-?>
