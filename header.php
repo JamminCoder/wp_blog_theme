@@ -9,11 +9,17 @@
     ?>
 </head>
 <body>
-    <?php
-        wp_nav_menu([
-            "menu" => "primary",
-            "container" => "",
-            "theme_location" => "primary",
-            "items_wrap" => '<ul>%3$s</ul>'
-        ]);
-    ?>
+    <nav class='nav'>
+        <div class='collapse-btn'></div>
+        <div class="nav__content">
+            <?php
+                wp_nav_menu([
+                    "menu" => "primary",
+                    "container" => "",
+                    "theme_location" => "primary",
+                    "items_wrap" => '<ul>%3$s</ul>',
+                    "menu_class" => "nav-list",
+                ]);
+            ?>
+        </div>
+    </nav>

@@ -1,18 +1,21 @@
 <?php get_header() ?>
 
 
-<main>
+<main class='container'>
     <?php
         if (have_posts()) 
         {
             while (have_posts())
             {
                 the_post();
-                the_title();
-                the_content();
+                ?>
+                <article <?php post_class() ?>>
+                    <h1><?php the_title(); ?></h1>
+                    <?php the_content(); ?>
+                </article>
+                <?php 
             }
         }
-    
     ?>
 </main>
 
