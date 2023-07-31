@@ -1,19 +1,9 @@
 <?php
 get_header();
 
+$page = get_queried_object();
+setup_postdata($page);
 
-
-$posts = get_posts();
-
-foreach ($posts as $post) {
-    the_post();
-
-    ?>
-    <div>
-        <a href="<?php the_permalink() ?>"><?php the_title() ?></a>
-    </div>
-
-    <?php
-}
+the_content();
 
 get_footer();
