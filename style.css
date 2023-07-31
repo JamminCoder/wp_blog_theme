@@ -13,7 +13,8 @@ Version: 1.0
 }
 
 body {
-    background-color: #ebebeb;
+    min-height: 100vh;
+    position: relative;
 }
 
 .nav {
@@ -56,12 +57,15 @@ body {
 }
 
 footer {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    
     display: flex;
     flex-wrap: wrap;
-    
-    height: 100%;
+    width: 100%;
+    padding: 2rem;
     background-color: gray;
-    padding: 1rem;
 }
 
 img {
