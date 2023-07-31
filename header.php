@@ -10,6 +10,16 @@
 </head>
 <body>
     <nav class='nav'>
+        <div>
+            <?php 
+            if (function_exists("the_custom_logo")) {
+                $logo_id = get_theme_mod("custom_logo");
+                $logo_data = wp_get_attachment_image_src($logo_id);
+                $logo_src = $logo_data[0];
+            } 
+            ?>
+            <img src="<?php echo $logo_src ?>" width="40"/>
+        </div>
         <div class='collapse-btn'></div>
         <div class="nav__content">
             <?php
