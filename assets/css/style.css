@@ -1,0 +1,57 @@
+@import url(nav.css);
+@import url(post.css);
+
+/* Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Slab", serif;
+    line-height: 1;
+}
+
+p {
+    line-height: 1.3rem;
+}
+
+footer {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem;
+    background-color: gray;
+}
+
+img {
+    border-radius: 5px;
+}
+
+.container {
+    display: grid;
+    place-content: center;
+    padding: 4rem 1rem;
+    /* For the footer */
+    padding-bottom: 10rem;
+    max-width: 40rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.hidden {
+    display: none;
+}

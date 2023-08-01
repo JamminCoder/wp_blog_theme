@@ -1,0 +1,15 @@
+h1.post__title {
+    margin-bottom: 2em;
+}
+
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6 {
+    margin-bottom: 1em;
+}
+
+.post p {
+    margin-bottom: 2.5em;
+}
