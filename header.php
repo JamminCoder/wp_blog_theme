@@ -22,16 +22,22 @@
             ?>
             <img src="<?php echo $logo_src ?>" width="40"/>
         </div>
-        <div class='collapse-btn'></div>
-        <div class="nav__content">
-            <?php
-                wp_nav_menu([
-                    "menu" => "primary",
-                    "container" => "",
-                    "theme_location" => "primary",
-                    "items_wrap" => '<ul>%3$s</ul>',
-                    "menu_class" => "nav-list",
-                ]);
-            ?>
+        <div>
+            <div class="collapse-btn">
+                <div class="collapse-btn__line"></div>
+                <div class="collapse-btn__line"></div>
+                <div class="collapse-btn__line"></div>
+            </div>
+            <div class="nav__content">
+                <?php
+                    wp_nav_menu([
+                        "menu" => "primary",
+                        "container" => "",
+                        "theme_location" => "primary",
+                        "items_wrap" => '<ul>%3$s</ul>',
+                        "menu_class" => "nav-list",
+                    ]);
+                ?>
+            </div>
         </div>
     </nav>
